@@ -1,0 +1,35 @@
+body {
+    font-family: monospace;
+}
+
+* {
+    text-align: center;
+}
+
+.jsonText {
+    text-align: left;
+    border: 2px solid #717070;
+    border-radius: 5px;
+    width: 50%;
+    height: 300px;
+    resize: none;
+}
+
+.button{
+    background-color: #dbdcdb;
+    border-radius: 10px;
+    font-size: 16px;
+    border: none;
+    padding: 12px 28px;
+}
+
+.large-label{
+    font-size: 16px;
+}
+#formattedSection{
+    background-color: #dbdcdb;
+    font-size: 16px;
+    border: solid;
+    border-radius: 10px;
+    padding: 12px 28px;
+}
