@@ -1,6 +1,4 @@
-**
 ## JSON FORMATTER
-**
 **A simple project for self-educational goal.**
 
 **Project description:**
