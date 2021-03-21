@@ -1,6 +1,6 @@
 package com.nocompany.parser.handler.impl;
 
-import static com.nocompany.parser.Parser.*;
+import static com.nocompany.parser.data.DB.*;
 import com.nocompany.parser.entity.Entity;
 import com.nocompany.parser.handler.I_Handler;
 

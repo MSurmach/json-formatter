@@ -1,9 +1,6 @@
 package com.nocompany.parser.handler.impl;
 
-import static com.nocompany.parser.Parser.BUFFER;
-import static com.nocompany.parser.Parser.STORAGE;
-import static com.nocompany.parser.Parser.clearBuffer;
-import static com.nocompany.parser.Parser.isBufferEmpty;
+import static com.nocompany.parser.data.DB.*;
 import com.nocompany.parser.entity.Entity;
 import com.nocompany.parser.handler.I_Handler;
 

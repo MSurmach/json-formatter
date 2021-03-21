@@ -3,21 +3,27 @@ package com.nocompany.parser.entity;
 import com.nocompany.parser.types.Type;
 import com.nocompany.parser.types.impl.BooleanType;
 import com.nocompany.parser.types.impl.NullType;
+import com.nocompany.parser.types.impl.NumberType;
 import com.nocompany.parser.types.impl.StringType;
 
-public class FieldEntity extends Entity {
+public class E_KeyValue extends Entity {
 
     private Type type;
 
-    private Type getTypeFromString(String content) {
-        switch (content) {
-            case ("null"):
-                return new NullType();
-            case ("true"):
-            case ("false"):
-                return new BooleanType();
-            default:
-                return new StringType();
+    Type getTypeFromString(String content) {
+        try {
+            Double.parseDouble(content);
+            return new NumberType();
+        } catch (NumberFormatException exception) {
+            switch (content) {
+                case ("null"):
+                    return new NullType();
+                case ("true"):
+                case ("false"):
+                    return new BooleanType();
+                default:
+                    return new StringType();
+            }
         }
     }
 

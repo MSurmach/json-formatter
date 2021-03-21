@@ -1,9 +1,11 @@
 package com.nocompany.parser.handler.impl;
 
-import static com.nocompany.parser.Parser.*;
 import static com.nocompany.parser.Symbol.*;
+import com.nocompany.parser.data.ContentPointer;
+import static com.nocompany.parser.data.DB.*;
+import com.nocompany.parser.entity.E_Array;
+import com.nocompany.parser.entity.E_Object;
 import com.nocompany.parser.entity.Entity;
-import com.nocompany.parser.entity.ObjArrEntity;
 import com.nocompany.parser.handler.I_Handler;
 
 public class LeftBracketHandler extends Handler implements I_Handler {
@@ -23,8 +25,8 @@ public class LeftBracketHandler extends Handler implements I_Handler {
     }
 
     private Entity initializeEntity() {
-        char currentSymbol = PARSEBLE.getCurrentSymbol();
-        return (currentSymbol == LEFT_SQUARE_BRACKET ? new ObjArrEntity(true) : new ObjArrEntity(false));
+        char currentSymbol = ContentPointer.getCurrentSymbol();
+        return (currentSymbol == LEFT_SQUARE_BRACKET ? new E_Array() : new E_Object());
     }
 
 }

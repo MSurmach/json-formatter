@@ -1,5 +1,10 @@
 package com.nocompany.parser;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Symbol {
 
     //   the general control symbols
@@ -14,11 +19,11 @@ public class Symbol {
     public static final char COMMA = ',';
     public static final char SPACE = ' ';
 
-//    //   the formatting symbols
-//    public static final char BACKSPACE = '\b';
-//    public static final char FORM_FEED = '\f';
+    //   the formatting symbols
+    public static final List<Character> FORMATTING_SYMBOLS = Arrays.asList('\n','\r','\b','\f','\t');
 //    public static final char LINE_FEED = '\n';
 //    public static final char CARRIAGE_RETURN = '\r';
+//    public static final char BACKSPACE = '\b';
+//    public static final char FORM_FEED = '\f';
 //    public static final char TABULATION = '\t';
-//    
 }

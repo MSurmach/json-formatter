@@ -3,6 +3,7 @@ package com.nocompany.controller;
 import com.nocompany.formatter.Formatter;
 import com.nocompany.formatter.FormatterSelector;
 import com.nocompany.parser.Parser;
+import com.nocompany.parser.data.DB;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,7 +23,7 @@ public class JsonServlet extends HttpServlet {
         parser.parse();
         FormatterSelector selector = FormatterSelector.getFormatter();
         Formatter formatter = selector.getFormatter(template);
-        String formattedJson = formatter.format(Parser.STORAGE);
+        String formattedJson = formatter.format(DB.STORAGE);
         req.setAttribute("formattedJSON", formattedJson);
         ServletContext context = req.getServletContext();
         context.getRequestDispatcher("/index.jsp").forward(req, resp);
